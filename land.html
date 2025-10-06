@@ -1,11 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="colorful.css">
+</head>
+<body>
+<div class="api">
+</div>
 <section class="top-banner">
   <div class="container">
-    <h1 class="heading">Weather</h1>
+    <h1 class="heading">Weather App</h1>
     <form>
       <input type="text" placeholder="Search for a city" autofocus>
-      <button type="submit">Find</button>
+      <button type="submit">SUBMIT</button>
       <span class="msg"></span>
     </form>
+  </div>
+  <div>
+    <p class="suggestion">e.g. New York, US</p>
   </div>
 </section>
 <section class="ajax-section">
@@ -13,15 +27,11 @@
     <ul class="cities"></ul>
   </div>
 </section>
-
-<li class="city">
-  <h2 class="city-name" data-name="...">
-    <span>...</span>
-    <sup>...</sup>
-  </h2>
-  <span class="city-temp">...<sup>°C</sup></span>
-  <figure>
-    <img class="city-icon" src="..." alt="...">
-    <figcaption>...</figcaption>
-  </figure>
-</li>
+<footer class="page-footer">
+  <div class="container">
+    <p>Created by Alex</p>
+  </div>
+</footer>
+<script src="city.js"></script>
+</body>
+</html>
