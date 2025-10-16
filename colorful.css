@@ -1,24 +1,40 @@
 /* CSS Variables for consistent color scheme
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Define global CSS variables (custom properties) for consistent theming throughout the app
+   These variables make it easy to maintain and update the color scheme in one place */
 :root {
-  --bg_main: #3b75d8;      /* Main background color */
-  --text_light: #ffffff;   /* Light text color for dark backgrounds */
-  --text_med: #000000;     /* Medium contrast text */
-  --text_dark: #262a31;    /* Dark text color for light backgrounds */
-  --red: #494445;          /* Error states and alerts */
-  --darkred: #776e70;      /* Darker variation for hover states */
-  --orange: #ff0000;       /* Accent color */
+  /* Core colors for the application */
+  --bg_main: #3b75d8;      /* Main app background - blue shade for weather theme */
+  --text_light: #ffffff;   /* Light text color for dark backgrounds - pure white for max contrast */
+  --text_med: #000000;     /* Medium contrast text - black for general content */
+  --text_dark: #262a31;    /* Dark text color - charcoal shade for main text */
+  
+  /* Interactive element colors */
+  --red: #ff0033;          /* Primary button color - bright red for calls to action */
+  --darkred: #500516;      /* Hover state for red buttons - darker shade for interaction feedback */
+  --orange: #ff0000;       /* Accent color - used for country tags and highlights */
+  
+  /* Card and container styling */
+  --card-bg: rgba(255, 255, 255, 0.1);       /* Semi-transparent white for card backgrounds */
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  --detail-bg: rgba(255, 255, 255, 0.05);    /* Very light background for detail sections */
 }
 
-/* Basic link styling - inherit color and remove underline */
+/* Basic Element Styles and Resets
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Link Styling
+   - Inherits color from parent for consistent theming
+   - Removes default underline for cleaner look */
 a {
   color: inherit;
   text-decoration: none;
 }
 
 /* Global Reset
-   Remove default margins and padding
-   Use border-box for more predictable sizing */
+   - Removes default browser margins and padding
+   - Uses border-box for more predictable sizing
+   - Standardizes font weight across elements */
 * {
   margin: 0;
   padding: 0;
@@ -26,18 +42,25 @@ a {
   font-weight: normal;
 }
 
-/* Interactive elements styling */
+/* Interactive Elements
+   - Enhances button usability with pointer cursor
+   - Removes default browser styling for consistent look */
 button {
-  cursor: pointer;  /* Show pointer cursor on buttons */
+  cursor: pointer;  /* Visual indication of clickable elements */
 }
  
-/* Remove default input styling */
+/* Form Input Styling
+   - Removes default browser appearance
+   - Ensures consistent look across browsers */
 input {
-  -webkit-appearance: none;
-  appearance: none;
+  -webkit-appearance: none;  /* Removes WebKit default styling */
+  appearance: none;         /* Removes default styling across browsers */
 }
  
-/* Shared styles for buttons and inputs */
+/* Shared Interactive Element Properties
+   - Removes borders and backgrounds for custom styling
+   - Inherits colors for theme consistency
+   - Removes focus outline for custom focus states */
 button,
 input {
   border: none;
@@ -46,224 +69,361 @@ input {
   color: inherit;
 }
 
-/* Responsive image styling */
+/* Responsive Media and Layout Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Image Responsiveness
+   - Ensures images scale properly within containers
+   - Prevents layout issues with varying image sizes
+   - Maintains aspect ratio when scaling */
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  display: block;       /* Removes inline image whitespace */
+  max-width: 100%;     /* Scales image within container */
+  height: auto;        /* Maintains aspect ratio */
 }
 
-/* Remove list bullets */
+/* List Styling Reset
+   - Removes default bullet points
+   - Used for weather card grid layout */
 ul {
   list-style: none;
 }
 
-/* Base body styles */
+/* Base Document Styling
+   - Sets fundamental typography and spacing
+   - Establishes color theme
+   - Creates responsive page padding */
 body {
-  font: 1rem/1.3 "Roboto", sans-serif;  /* Base font settings */
-  background: var(--bg_main);           /* Background color */
+  font: 1rem/1.3 "Roboto", sans-serif;  /* Size/line-height/font-family */
+  background: var(--bg_main);           /* Blue theme background */
   color: var(--text_dark);              /* Default text color */
-  padding: 70px;                        /* Page padding */
+  padding: 70px;                        /* Generous page padding */
 }
 
-/* Container for consistent width and centering
-   Used in multiple sections throughout the page */
+/* Main Layout Container
+   - Provides consistent width constraints
+   - Centers content horizontally
+   - Creates responsive margins */
+/* Main Content Container
+   - Creates a responsive wrapper for all content
+   - Prevents content from becoming too wide on large screens
+   - Maintains consistent side margins */
 .container {
-  width: 100%;
-  max-width: 1200px;     /* Maximum width for large screens */
-  margin: 0 auto;        /* Center the container */
-  padding: 0 15px;       /* Side padding for mobile */
+  width: 100%;               /* Full width on small screens */
+  max-width: 1200px;        /* Width limit for large screens */
+  margin: 0 auto;           /* Center horizontally */
+  padding: 0 15px;          /* Breathing room on sides */
 }
 
-/* Top Banner Section Styles
+/* Top Banner Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Main Header Area
+   - Contains app title and search functionality
+   - Uses light text for contrast against blue background */
 .top-banner {
-  color: var(--text_light);  /* Light text for contrast */
+  color: var(--text_light);
 }
 
-/* Main heading styling */
+/* App Title Styling
+   - Large, bold text for app name
+   - Optimized for readability with letter spacing
+   - Includes bottom padding for separation from search */
 .heading {
   font-weight: bold;
-  font-size: 4rem;          /* Large, prominent size */
-  letter-spacing: 0.02em;   /* Slight letter spacing for readability */
-  padding: 0 0 30px 0;      /* Space below heading */
+  font-size: 4rem;          /* Prominent size for title */
+  letter-spacing: 0.02em;   /* Enhanced readability */
+  padding: 0 0 30px 0;      /* Space before search area */
 }
 
-/* Search form container */
+/* Search Form Components
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Search Form Container
+   - Flexible layout for search input and button
+   - Positions error message absolutely below */
 .top-banner form {
-  position: relative;
+  position: relative;        /* For absolute message positioning */
   display: flex;            /* Horizontal layout */
-  align-items: center;      /* Vertically center items */
+  align-items: center;      /* Vertical centering */
 }
 
-/* Search input styling */
+/* Search Input Field
+   - Large, clear text input
+   - Minimal styling with bottom border only
+   - Maintains consistent height */
 .top-banner form input {
-  font-size: 2rem;
-  height: 40px;
-  padding: 5px 5px 10px;
-  border-bottom: 1px solid;  /* Underline effect */
+  font-size: 2rem;          /* Large, readable text */
+  height: 40px;             /* Consistent height */
+  padding: 5px 5px 10px;    /* Space around text */
+  border-bottom: 1px solid; /* Simple underline */
 }
 
-/* Input placeholder text */
+/* Input Placeholder Text
+   - Matches parent text color for consistency
+   - Provides clear instruction for users */
 .top-banner form input::placeholder {
-  color: currentColor;       /* Match parent text color */
+  color: currentColor;      /* Inherits from parent */
 }
 
-/* Search button styling */
+/* Search Submit Button
+   - Bold, eye-catching design
+   - Smooth hover transition
+   - Clear spacing and padding */
 .top-banner form button {
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.1em;     /* Space out button text */
-  padding: 15px 20px;
-  margin-left: 15px;
-  border-radius: 5px;
-  background: var(--red);
-  transition: background 0.3s ease-in-out;
+  font-size: 1rem;          /* Readable text size */
+  font-weight: bold;        /* Emphasized text */
+  letter-spacing: 0.1em;    /* Spaced out text */
+  padding: 15px 20px;       /* Comfortable click target */
+  margin-left: 15px;        /* Separation from input */
+  border-radius: 5px;       /* Rounded corners */
+  background: var(--red);   /* Standout color */
+  transition: background 0.3s ease-in-out; /* Smooth hover */
 }
 
+/* Button Hover State
+   - Darker background for user feedback
+   - Maintains other styling */
 .top-banner form button:hover {
   background: var(--darkred);
 }
 
+/* Error Message Container
+   - Positioned below search form
+   - Limited width for readability
+   - Minimum height to prevent layout shift */
 .top-banner form .msg {
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-  max-width: 450px;
-  min-height: 40px;
+  position: absolute;       /* Takes out of normal flow */
+  bottom: -40px;           /* Space below form */
+  left: 0;                 /* Aligned with form */
+  max-width: 450px;        /* Limited width */
+  min-height: 40px;        /* Consistent space */
 }
 
+/* Search Suggestion Text
+   - Provides example search format
+   - Positioned below search form
+   - Flexible layout for responsive design */
 .suggestion {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 270px;
-  margin-top: 15px;
-  align-items: right;
+  display: flex;           /* Flexible layout */
+  flex-wrap: wrap;         /* Allows wrapping on small screens */
+  margin-left: 270px;      /* Alignment with form */
+  margin-top: 15px;        /* Space below form */
+  align-items: right;      /* Right alignment */
 }
 
-
-/* SECTION #2
+/* Weather Cards Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Main Weather Content Area
+   - Contains the grid of weather cards
+   - Provides vertical spacing from search area */
 .ajax-section {
-  margin: 70px 0 20px;
+  margin: 70px 0 20px;     /* Spacing above and below */
 }
 
+/* Weather Cards Grid
+   - Responsive grid layout for weather cards
+   - 4 columns on large screens
+   - Gaps between cards for visual separation */
 .ajax-section .cities {
-  display: grid;
-  grid-gap: 32px 20px;
-  grid-template-columns: repeat(4, 1fr);
+  display: grid;           /* Grid layout */
+  grid-gap: 32px 20px;    /* Vertical and horizontal gaps */
+  grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
 }
 
+/* Individual Weather Card
+   - Clean, modern card design
+   - Light background with medium contrast text
+   - Rounded corners for soft appearance */
 .ajax-section .city {
-  position: relative;
-  padding: 40px 10%;
-  border-radius: 20px;
-  background: var(--text_light);
-  color: var(--text_med);
+  position: relative;      /* For pseudo-element positioning */
+  padding: 40px 10%;      /* Internal spacing */
+  border-radius: 20px;    /* Rounded corners */
+  background: var(--text_light);  /* Light card background */
+  color: var(--text_med);        /* Medium contrast text */
 }
 
+/* Card Shadow Effect
+   - Creates subtle depth with pseudo-element
+   - Semi-transparent for layered effect
+   - Slightly offset for 3D appearance */
 .ajax-section .city::after {
   content: '';
-  width: 90%;
-  height: 50px;
-  position: absolute;
-  bottom: -12px;
-  left: 5%;
-  z-index: -1;
-  opacity: 0.3;
-  border-radius: 20px;
-  background: var(--text_light);
+  width: 90%;             /* Slightly narrower than card */
+  height: 50px;           /* Shadow height */
+  position: absolute;     /* Positioned relative to card */
+  bottom: -12px;         /* Offset below card */
+  left: 5%;              /* Centered horizontally */
+  z-index: -1;           /* Behind the card */
+  opacity: 0.3;          /* Semi-transparent */
+  border-radius: 20px;   /* Matches card corners */
+  background: var(--text_light);  /* Shadow color */
 }
 
+.ajax-section .city-name {
+  margin-bottom: 20px;
+}
+
+.ajax-section .city-name span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text_dark);
+}
+
+/* Weather Card Content Styling
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Caption Text
+   - Used for additional weather information
+   - Uppercase for emphasis
+   - Spaced letters for readability */
 .ajax-section figcaption {
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
+/* Temperature Display
+   - Large, bold temperature number
+   - High contrast for easy reading
+   - Prominent position in card */
 .ajax-section .city-temp {
-  font-size: 5rem;
-  font-weight: bold;
-  margin-top: 10px;
-  color: var(--text_dark);
+  font-size: 5rem;          /* Very large size */
+  font-weight: bold;        /* Bold weight */
+  margin-top: 10px;         /* Space above */
+  color: var(--text_dark);  /* Dark, readable color */
 }
 
+/* Weather Details Text
+   - Consistent styling for all detail elements
+   - Bold, capitalized text
+   - Proper line height for readability */
+.ajax-section .detail, .detail-value, .sun-value, .detail-label, .sun-label {
+  font-size: 1.1rem;        /* Readable size */
+  font-weight: bold;        /* Emphasized weight */
+  margin-top: 10px;         /* Vertical spacing */
+  color: var(--text_dark);  /* Dark text */
+  text-transform: capitalize;  /* Capitalize first letter */
+  line-height: 1.5;         /* Comfortable line height */
+}
+
+/* Weather Description
+   - Slightly larger than details
+   - Bold text for emphasis
+   - Capitalized words */
+.ajax-section .details {
+  font-size: 1.2rem;        /* Larger than details */
+  font-weight: bold;        /* Bold weight */
+  margin-top: 10px;         /* Spacing */
+  color: var(--text_dark);  /* Dark text */
+  text-transform: capitalize;  /* Proper capitalization */
+}
+
+/* Temperature Unit Superscript
+   - Smaller size for temperature units
+   - Proportional to main temperature */
 .ajax-section .city sup {
-  font-size: 0.5em;
+  font-size: 0.5em;         /* Half the parent size */
 }
 
+/* Country Code Badge
+   - Contrasting background color
+   - Rounded corners for badge look
+   - Light text for readability */
 .ajax-section .city-name sup {
-  padding: 0.2em 0.6em;
-  border-radius: 30px;
-  color: var(--text_light);
-  background: var(--orange);
+  padding: 0.2em 0.6em;     /* Internal spacing */
+  border-radius: 30px;      /* Fully rounded corners */
+  color: var(--text_light); /* Light text */
+  background: var(--orange);/* Orange background */
 }
 
+/* Weather Icon
+   - Large, prominent weather icon
+   - Square dimensions
+   - Space from other elements */
 .ajax-section .city-icon {
-  margin-top: 10px;
-  width: 100px;
-  height: 100px;
+  margin-top: 10px;         /* Space above */
+  width: 150px;             /* Fixed width */
+  height: 150px;            /* Fixed height */
 }
 
+/* Responsive Design
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Large Tablets and Small Desktops (max-width: 1000px)
+   - Reduces padding for smaller screens
+   - Adjusts grid to 3 columns */
 @media screen and (max-width: 1000px) {
   body {
-    padding: 30px;
+    padding: 30px;        /* Reduced body padding */
   }
   
   .ajax-section .cities {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
   }
 }
 
+/* Tablets and Large Phones (max-width: 700px)
+   - Reduces font sizes for better fit
+   - Stacks form elements vertically
+   - Adjusts grid to 2 columns */
 @media screen and (max-width: 700px) {
+  /* Smaller headings and temperatures */
   .heading,
   .ajax-section .city-temp {
-    font-size: 3rem;
+    font-size: 3rem;      /* Reduced font size */
   }
   
   .ajax-section {
-    margin-top: 20px;
+    margin-top: 20px;     /* Less top margin */
   }
   
+  /* Vertical form layout */
   .top-banner form {
     flex-direction: column;
     align-items: flex-start;
   }
   
+  /* Full-width form elements */
   .top-banner form input,
   .top-banner form button {
     width: 100%;
   }
 
+  /* Adjusted button spacing */
   .top-banner form button {
     margin: 20px 0 0 0;
   }
   
+  /* Repositioned error message */
   .top-banner form .msg {
-    position: static;
-    max-width: none;
-    min-height: 0;
-    margin-top: 10px;
+    position: static;     /* Normal flow */
+    max-width: none;      /* Full width */
+    min-height: 0;        /* Natural height */
+    margin-top: 10px;     /* Space above */
   }
 
+  /* Two column grid */
   .ajax-section .cities {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Small Phones (max-width: 500px)
+   - Minimal padding for maximum content space
+   - Single column layout */
 @media screen and (max-width: 500px) {
   body {
-    padding: 15px;
+    padding: 15px;        /* Minimal padding */
   }
   
+  /* Single column grid */
   .ajax-section .cities {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-
-
-/* FOOTER
+/* Footer Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-footer {
   text-align: right;
