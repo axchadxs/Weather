@@ -25,6 +25,7 @@ A polished, feature-rich weather application that displays current weather condi
   - Mobile: 1 column
 
 ### Recent Updates:
+- 🆕 Added Humidity percentage, Wind speed/direction, High/Low temperatures, and Sunrise/Sunset times to the weather display
 - 🆕 Increased weather icon size for better visibility
 - 🆕 Added bold formatting for city names
 - 🆕 Improved high/low temperature display format
