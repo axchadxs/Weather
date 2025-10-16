@@ -1,20 +1,24 @@
-/* RESET STYLES
+/* CSS Variables for consistent color scheme
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-  --bg_main: #3b75d8;
-  --text_light: #ffffff;
-  --text_med: #000000;
-  --text_dark: #262a31;
-  --red: #494445;
-  --darkred: #776e70;
-  --orange: #ff0000;
+  --bg_main: #3b75d8;      /* Main background color */
+  --text_light: #ffffff;   /* Light text color for dark backgrounds */
+  --text_med: #000000;     /* Medium contrast text */
+  --text_dark: #262a31;    /* Dark text color for light backgrounds */
+  --red: #494445;          /* Error states and alerts */
+  --darkred: #776e70;      /* Darker variation for hover states */
+  --orange: #ff0000;       /* Accent color */
 }
 
+/* Basic link styling - inherit color and remove underline */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Global Reset
+   Remove default margins and padding
+   Use border-box for more predictable sizing */
 * {
   margin: 0;
   padding: 0;
@@ -22,15 +26,18 @@ a {
   font-weight: normal;
 }
 
+/* Interactive elements styling */
 button {
-  cursor: pointer;
+  cursor: pointer;  /* Show pointer cursor on buttons */
 }
  
+/* Remove default input styling */
 input {
   -webkit-appearance: none;
   appearance: none;
 }
  
+/* Shared styles for buttons and inputs */
 button,
 input {
   border: none;
@@ -39,65 +46,74 @@ input {
   color: inherit;
 }
 
+/* Responsive image styling */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+/* Remove list bullets */
 ul {
   list-style: none;
 }
 
+/* Base body styles */
 body {
-  font: 1rem/1.3 "Roboto", sans-serif;
-  background: var(--bg_main);
-  color: var(--text_dark);
-  padding: 70px;
+  font: 1rem/1.3 "Roboto", sans-serif;  /* Base font settings */
+  background: var(--bg_main);           /* Background color */
+  color: var(--text_dark);              /* Default text color */
+  padding: 70px;                        /* Page padding */
 }
 
+/* Container for consistent width and centering
+   Used in multiple sections throughout the page */
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  max-width: 1200px;     /* Maximum width for large screens */
+  margin: 0 auto;        /* Center the container */
+  padding: 0 15px;       /* Side padding for mobile */
 }
 
-
-/* SECTION #1
+/* Top Banner Section Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .top-banner {
-  color: var(--text_light);
+  color: var(--text_light);  /* Light text for contrast */
 }
 
+/* Main heading styling */
 .heading {
   font-weight: bold;
-  font-size: 4rem;
-  letter-spacing: 0.02em;
-  padding: 0 0 30px 0;
+  font-size: 4rem;          /* Large, prominent size */
+  letter-spacing: 0.02em;   /* Slight letter spacing for readability */
+  padding: 0 0 30px 0;      /* Space below heading */
 }
 
+/* Search form container */
 .top-banner form {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: flex;            /* Horizontal layout */
+  align-items: center;      /* Vertically center items */
 }
 
+/* Search input styling */
 .top-banner form input {
   font-size: 2rem;
   height: 40px;
   padding: 5px 5px 10px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid;  /* Underline effect */
 }
 
+/* Input placeholder text */
 .top-banner form input::placeholder {
-  color: currentColor; 
+  color: currentColor;       /* Match parent text color */
 }
 
+/* Search button styling */
 .top-banner form button {
   font-size: 1rem;
   font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1em;     /* Space out button text */
   padding: 15px 20px;
   margin-left: 15px;
   border-radius: 5px;

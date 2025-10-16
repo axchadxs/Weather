@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding and responsive viewport setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <!-- Link to our custom CSS file -->
     <link rel="stylesheet" href="colorful.css">
 </head>
 <body>
+<!-- Container for API key (if needed) -->
 <div class="api">
 </div>
+
+<!-- Top banner section containing the search form -->
 <section class="top-banner">
   <div class="container">
     <h1 class="heading">Weather App</h1>
+    <!-- Search form for city weather lookup -->
     <form>
+      <!-- Input field with autofocus for better UX -->
       <input type="text" placeholder="Search for a city" autofocus>
       <button type="submit">SUBMIT</button>
+      <!-- Message container for error/success notifications -->
       <span class="msg"></span>
     </form>
   </div>
   <div>
+    <!-- Search format suggestion for users -->
     <p class="suggestion">e.g. New York, US</p>
   </div>
 </section>
+
+<!-- Section where weather cards will be dynamically added -->
 <section class="ajax-section">
   <div class="container">
+    <!-- Container for weather cards -->
     <ul class="cities"></ul>
   </div>
 </section>
+
+<!-- Footer section -->
 <footer class="page-footer">
   <div class="container">
     <p>Created by Alex</p>
   </div>
 </footer>
+
+<!-- Link to our JavaScript file -->
 <script src="city.js"></script>
 </body>
 </html>
