@@ -41,11 +41,6 @@ As this project is still in development, contributions and suggestions are welco
 - Suggest new features
 - Submit pull requests
 
-## 📝 Notes
-- The app currently uses the OpenWeatherMap API for weather data
-- Custom weather icons should be in .gif format
-- Weather updates are fetched in real-time
-
 ## 🔜 Upcoming Features
 - [ ] Detailed weather information
 - [ ] 5-day forecast
