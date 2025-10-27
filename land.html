@@ -1,65 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Document Metadata and Setup
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- Character encoding for proper text rendering -->
     <meta charset="UTF-8">
-    <!-- Responsive viewport settings for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- App title displayed in browser tab -->
     <title>Weather App</title>
-    <!-- External stylesheet for all visual styling -->
     <link rel="stylesheet" href="colorful.css">
 </head>
 <body>
 
-<!-- Top Banner Section
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- Contains app header and search functionality -->
+<!-- Header and search form -->
 <section class="top-banner">
   <div class="container">
-    <!-- Main app title -->
     <h1 class="heading">Weather App</h1>
-    <!-- City search form -->
     <form>
-      <!-- Search input with autofocus for immediate typing -->
       <input type="text" placeholder="Search for a city" autofocus>
-      <!-- Submit button for search -->
       <button type="submit">SUBMIT</button>
-      <!-- Container for error messages -->
+      <!-- Message container for feedback/errors -->
       <span class="msg"></span>
     </form>
   </div>
-  <!-- Search format suggestion -->
   <div>
     <p class="suggestion">e.g. New York, US</p>
   </div>
 </section>
 
-<!-- Weather Display Section
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- Section for dynamically generated weather cards -->
+<!-- Container for weather results -->
 <section class="ajax-section">
   <div class="container">
-    <!-- Unordered list to hold weather cards
-         Cards are added here via JavaScript -->
     <ul class="cities"></ul>
   </div>
 </section>
 
-<!-- Footer Section
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- Page footer with credits -->
 <footer class="page-footer">
   <div class="container">
     <p>Created by Alex</p>
   </div>
 </footer>
 
-<!-- JavaScript
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- Main application logic and functionality -->
 <script src="city.js"></script>
 </body>
 </html>

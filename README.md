@@ -1,14 +1,13 @@
-# Weather App 🌤️ WIP
+# Weather App 🌤️
 
-A polished, feature-rich weather application that displays current weather conditions with custom animated icons and detailed weather information.
+A smooth easy to use weather application that displays current weather conditions with custom animated icons and detailed weather information.
 
-## 🌟 Features
+## ✨ Features
 
 ### Currently Working:
 - ✅ City-based weather search with error handling
 - ✅ Real-time weather data from OpenWeatherMap API
 - ✅ Comprehensive weather information:
-  - Large, bold city names
   - Current temperature in Fahrenheit
   - High/Low temperature display
   - Humidity percentage
@@ -25,15 +24,14 @@ A polished, feature-rich weather application that displays current weather condi
   - Mobile: 1 column
 
 ### Recent Updates:
-- 🆕 Added Humidity percentage, Wind speed/direction, High/Low temperatures, and Sunrise/Sunset times to the weather display
-- 🆕 Increased weather icon size for better visibility
-- 🆕 Added bold formatting for city names
-- 🆕 Improved high/low temperature display format
-- 🆕 Enhanced weather description styling
-- 🆕 Added comprehensive code documentation
-- 🆕 Reorganized CSS into logical sections
+- Added humidity, wind data, high/low temps, and sunrise/sunset times
+- Increased weather icon size for better visibility
+- Improved temperature display formatting
+- Enhanced weather description styling
+- Added comprehensive code documentation
+- Reorganized CSS into logical sections
 
-## 🛠️ Technical Details
+##  Technical Details
 
 ### Technologies Used
 - HTML5 (Semantic markup)
@@ -46,32 +44,36 @@ A polished, feature-rich weather application that displays current weather condi
 ```
 Weather/
 │
-├── land.html          # Main HTML with semantic structure
-├── colorful.css       # Organized, commented styles
-├── city.js           # Well-documented JavaScript
+├── land.html          # Main HTML structure
+├── colorful.css       # Organized styles
+├── city.js           # Weather data handling
 └── icons/            # Animated weather GIFs
 ```
 
-### Code Organization
-- 📝 Comprehensive documentation in all files
-- 🎨 CSS organized by component and functionality
-- 🔧 Modular JavaScript functions
-- 🏗️ Semantic HTML structure
+## 🚀 Getting Started
 
-### Styling Features
-- 🎯 CSS Variables for consistent theming
-- 📱 Responsive breakpoints
-- 🎭 Custom animations and transitions
-- 🃏 Modern card-based design
-- 🎪 Flexible layouts with Grid and Flexbox
+### Prerequisites
+- Code editor (VS Code recommended)
+- Live Server extension for VS Code
+- OpenWeatherMap API key (free at [openweathermap.org](https://openweathermap.org/api))
+
+### Setup
+
+1. Clone/download the repository
+2. Get your free API key from OpenWeatherMap
+3. Replace the API key in `city.js` (line 10)
+4. Right-click `land.html` → "Open with Live Server"
+5. Search for any city!
+
+**Note:** Use Live Server to avoid CORS issues.
 
 ## 🔜 Future Enhancements
 - [ ] 5-day weather forecast
 - [ ] Location auto-detection
 - [ ] Weather alerts
 - [ ] Dark/Light mode toggle
-- [ ] Multiple city saving
-- [ ] Local storage for saved cities
+- [ ] Save favorite cities
+- [ ] Temperature unit conversion (°F/°C)
 
 ## 🤝 Contributing
 Contributions welcome! Feel free to:
@@ -81,4 +83,4 @@ Contributions welcome! Feel free to:
 - Improve documentation
 
 ---
-Created by Alex | Updated October 2025
+**Created by Alex** | Updated October 2025
